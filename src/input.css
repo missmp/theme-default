@@ -21,7 +21,7 @@
       height: var(--input-height);
       line-height: 1;
       outline: none;
-      padding: 3px 10px;
+      padding: 14px;
       transition: var(--border-transition-base);
       width: 100%;
 
@@ -47,10 +47,10 @@
       top: 0;
       text-align: center;
       color: var(--input-icon-color);
-      transition: all .3s;
+      transition: all 0.3s;
 
       &:after {
-        content: '';
+        content: "";
         height: 100%;
         width: 0;
         display: inline-block;

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import "./common/var.css";
-@import './mixins/button';
+@import "./mixins/button";
 
 @component-namespace el {
   @b button {
@@ -21,15 +21,17 @@
     & + .el-button {
       margin-left: 10px;
     }
-    
-    @mixin button-size var(--button-padding-vertical), var(--button-padding-horizontal), var(--button-font-size), var(--button-border-radius);
+
+    @mixin button-size var(--button-padding-vertical),
+      var(--button-padding-horizontal), var(--button-font-size),
+      var(--border-radius-small);
 
     &:hover,
     &:focus {
       color: var(--color-primary);
       border-color: @color;
     }
-    
+
     &:active {
       color: shade(var(--color-primary), var(--button-active-shade-percent));
       border-color: @color;
@@ -53,10 +55,13 @@
         border-color: var(--color-primary);
         color: var(--color-primary);
       }
-      
+
       &:active {
         background: var(--color-white);
-        border-color: shade(var(--color-primary), var(--button-active-shade-percent));
+        border-color: shade(
+          var(--color-primary),
+          var(--button-active-shade-percent)
+        );
         color: shade(var(--color-primary), var(--button-active-shade-percent));
         outline: none;
       }
@@ -99,39 +104,50 @@
 
       &:before {
         pointer-events: none;
-        content: '';
+        content: "";
         position: absolute;
         left: -1px;
         top: -1px;
         right: -1px;
         bottom: -1px;
         border-radius: inherit;
-        background-color: rgba(255,255,255,.35);
+        background-color: rgba(255, 255, 255, 0.35);
       }
     }
     @m primary {
-      @mixin button-variant var(--button-primary-color), var(--button-primary-fill), var(--button-primary-border);
+      @mixin button-variant var(--button-primary-color),
+        var(--button-primary-fill), var(--button-primary-border);
     }
     @m success {
-      @mixin button-variant var(--button-success-color), var(--button-success-fill), var(--button-success-border);
+      @mixin button-variant var(--button-success-color),
+        var(--button-success-fill), var(--button-success-border);
     }
     @m warning {
-      @mixin button-variant var(--button-warning-color), var(--button-warning-fill), var(--button-warning-border);
+      @mixin button-variant var(--button-warning-color),
+        var(--button-warning-fill), var(--button-warning-border);
     }
     @m danger {
-      @mixin button-variant var(--button-danger-color), var(--button-danger-fill), var(--button-danger-border);
+      @mixin button-variant var(--button-danger-color),
+        var(--button-danger-fill), var(--button-danger-border);
     }
     @m info {
-      @mixin button-variant var(--button-info-color), var(--button-info-fill), var(--button-info-border);
+      @mixin button-variant var(--button-info-color), var(--button-info-fill),
+        var(--button-info-border);
     }
     @m large {
-      @mixin button-size var(--button-large-padding-vertical), var(--button-large-padding-horizontal), var(--button-large-font-size), var(--button-border-radius);
+      @mixin button-size var(--button-large-padding-vertical),
+        var(--button-large-padding-horizontal), var(--button-large-font-size),
+        var(--button-border-radius);
     }
     @m small {
-      @mixin button-size var(--button-small-padding-vertical), var(--button-small-padding-horizontal), var(--button-small-font-size), var(--button-border-radius);
+      @mixin button-size var(--button-small-padding-vertical),
+        var(--button-small-padding-horizontal), var(--button-small-font-size),
+        var(--button-border-radius);
     }
     @m mini {
-      @mixin button-size var(--button-mini-padding-vertical), var(--button-mini-padding-horizontal), var(--button-mini-font-size), var(--button-border-radius);
+      @mixin button-size var(--button-mini-padding-vertical),
+        var(--button-mini-padding-horizontal), var(--button-mini-font-size),
+        var(--button-border-radius);
     }
     @m text {
       border: none;

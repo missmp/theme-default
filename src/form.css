@@ -47,7 +47,7 @@
       text-align: right;
       vertical-align: middle;
       float: left;
-      font-size: 14px;
+      font-size: 12px;
       color: var(--color-extra-light-black);
       line-height: 1;
       padding: 11px 12px 11px 0;
@@ -71,7 +71,7 @@
 
     @when required {
       .el-form-item__label:before {
-        content: '*';
+        content: "*";
         color: var(--color-danger);
         margin-right: 4px;
       }
@@ -83,7 +83,7 @@
         border-color: var(--color-danger);
       }
       & .el-input-group__append,
-      & .el-input-group__prepend, {
+      & .el-input-group__prepend {
         & .el-input__inner {
           border-color: transparent;
         }
