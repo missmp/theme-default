@@ -7,13 +7,18 @@
     display: inline-block;
     position: relative;
     color: var(--color-extra-light-black);
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-base-tse);
+    font-family: Gotham;
 
     .el-button-group {
       display: block;
       .el-button {
         float: none;
       }
+    }
+
+    @b dropdown:hover {
+      cursor: pointer;
     }
 
     & .el-dropdown__caret-button {
@@ -33,17 +38,20 @@
     background-color: var(--color-white);
     border: 1px solid var(--color-base-gray);
     box-shadow: var(--dropdown-menu-box-shadow);
-    padding: 6px 0;
     z-index: 10;
     position: absolute;
-    top: 0;
-    left: 0;
     min-width: 100px;
-
+    position: absolute;
+    will-change: top, left;
+    top: 40px;
+    left: -25px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    right: 0;
     @e item {
       list-style: none;
-      line-height: 36px;
-      padding: 0 10px;
+      line-height: 30px;
+      padding: 0 0px;
       margin: 0;
       cursor: pointer;
 
