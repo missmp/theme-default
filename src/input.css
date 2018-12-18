@@ -4,27 +4,27 @@
 @component-namespace el {
   @b input {
     position: relative;
-    font-size: var(--font-size-base-tse);
+    font-size: var(--font-size-base);
     display: inline-block;
     width: 100%;
 
     @e inner {
+      font-family: inherit;
+      font-size: 15px;
       appearance: none;
-      background: none;
+      background-color: var(--input-fill);
       background-image: none;
       border-radius: var(--input-border-radius);
-      border: none;
+      border: var(--input-border);
       box-sizing: border-box;
-      color: var(--color-primary);
+      color: var(--input-color);
       display: inline-block;
-      font-size: inherit;
-      height: var(--input-height-tse);
-      line-height: var(--input-height-tse);
       outline: none;
       padding: 14px;
       transition: var(--border-transition-base);
-      width: 105px;
-      text-decoration: underline;
+      width: 100%;
+      height: var(--input-height);
+      line-height: 1;
 
       &::placeholder {
         color: var(--input-placeholder-color);

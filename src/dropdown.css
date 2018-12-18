@@ -48,6 +48,7 @@
     border-radius: 5px;
     padding: 10px 20px;
     right: 0;
+    width: max-content;
     @e item {
       list-style: none;
       line-height: 30px;
@@ -65,7 +66,7 @@
         border-top: 1px solid var(--color-base-gray);
 
         &:before {
-          content: '';
+          content: "";
           height: 6px;
           display: block;
           margin: 0 -10px;

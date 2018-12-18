@@ -21,6 +21,8 @@
     td {
       width: 32px;
       height: 32px;
+      line-height: 32px;
+      padding: 0;
       box-sizing: border-box;
       text-align: center;
       cursor: pointer;
